@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=0.5">
 <title>할인액 계산기</title>
     
 <style>
-    body{text-align: center; background-color: rgb(226, 209, 197);}
-    span{display: inline-block; margin-bottom 10px;
+    body{text-align: center; background-color: rgb(152, 158, 152);}
+    span{display: inline-block; margin-bottom 5px;
 margin: auto; font-size: 1.5em; margin-top: 1.2em; height: 90px; width: 25%; border-width: 3px; font-weight: 900;}
-input{ font-size: 1.5em; width: 85%; text-align: right;}
+input{ font-size: 4rem; width: 80%; text-align: right; border-radius:15px;}
 #id { font-style: italic;}
 img { width: 100px; height: 90px;}
-div.numbe {display: inline; font-size: 1.5em; margin: 20px; width: 60%; font-weight: 900;}
-#origin {width: 30%; font-size: 2.0em;}
-div .buttonWrap {margin: 3px; font-size: 3em;}
-div .buttonWrap button {margin: 3px; font-size: 3em; width: 4em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 10%;}
+div.numbe {display: inline; font-size: 2em; margin: 20px; width: 60%; font-weight: 900;}
+#origin {width: 25%; font-size: 2em;}
+div .buttonWrap {margin: 2px; font-size: 4em;}
+div .buttonWrap button {margin: 1px; font-size: 4em; width: 4em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 20%; padding: 0%;}
 div .buttonWrap2 {margin: 3px; font-size: 3em;}
 div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; font-weight: bold; font-size: 0.5em; border-radius: 10%;}
-#bt1 {margin-bottom: 1em; margin-top: 1.5em;}
+#bt1 {margin-bottom: 1em; margin-top: 1.5em; }
+#asale { width: 200px; height: 150px; border-radius: 20%;}
+.buttonWrap > button { background-color: rgb(241, 241, 234);}
+#call1 { background-color: rgb(204, 150, 125);}
+#reset1 { background-color: rgb(204, 150, 125);}
+span > h2 {font-weight: 900; color: rgb(225, 225, 235); border: 1px solid; border-radius: 15px; width: 80%; display: inline-block; font-size: 2em; background-color: black;}
 </style>
 </head>
 
 <body>
-    <h2>할인 계산기<br>할인전 라벨의 정상가를 입력 → 계산 버튼을 누르세요.<br>계산전 참조용으로 사용하세요.</h2>
-    <div class="numbe">정상가 입력🔎<input type="text" name="read_input" pattern='\d*' id="origin"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" autofocus/></div>
-
-        
-        
-    <div class="sale">
-    <span><img src="50.jpg" ><input type="text" id="result" disabled/></span>
-    <span><img src="45.jpg" ><input type="text" id="result2" disabled/></span>
-    <span><img src="40.jpg" ><input type="text" id="result3" disabled/></span>
-    <span><img src="35.jpg" ><input type="text" id="result4" disabled/></span>
-    <span><img src="30.jpg" ><input type="text" id="result5" disabled/></span>
-    <span><img src="25.jpg" ><input type="text" id="result6" disabled/></span>
-    <span><img src="20.jpg" ><input type="text" id="result7" disabled/></span>
-    <span><img src="15.jpg" ><input type="text" id="result8" disabled/></span>
-    <span><img src="10.jpg" ><input type="text" id="result9" disabled/></span>
-    </div>
+    <h1> 😀SALE 계산기😀 <br></h1>
+    <h3>사용법 : ①라벨의 정상가 입력 👉 ②계산 버튼 <br> 고지된 할인율의 가격으로 계산됩니다.<br>계산전 참조용으로 사용하시고, 해당카드 및 쿠폰을 꼭 준비하세요.</h3>
+    <div><h1>라벨의 정상가를 입력하세요</h1></div>
+    <div class="numbe">정상가🔎<input type="text" name="read_input" pattern='\d*' id="origin"  onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" /></div>
 
     <div id="bt1">
 
@@ -56,12 +49,26 @@ div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; f
           <button onclick="addOutput(0)">0</button>
         </div>
         <div class="buttonWrap2" id="bt2">
-        <button onClick="calc(document.getElementById('origin').value)">계산</button>
-        <button  onClick="window.location.reload()">새로고침</button>
+        <button id="call1" onClick="calc(document.getElementById('origin').value)">계산</button>
+        <button id="reset1" onClick="window.location.reload()">새로고침</button>
         </div>
     </div>
 
+  
+        
+    <div class="sale">
+    <span><h2>50%할인</h2><input type="text" id="result" disabled/></span>
+    <span><h2>45%할인</h2><input type="text" id="result2" disabled/></span>
+    <span><h2>40%할인</h2><input type="text" id="result3" disabled/></span>
+    <span><h2>35%할인</h2><input type="text" id="result4" disabled/></span>
+    <span><h2>30%할인</h2><input type="text" id="result5" disabled/></span>
+    <span><h2>25%할인</h2><input type="text" id="result6" disabled/></span>
+    <span><h2>20%할인</h2><input type="text" id="result7" disabled/></span>
+    <span><h2>15%할인</h2><input type="text" id="result8" disabled/></span>
+    <span><h2>10%할인</h2><input type="text" id="result9" disabled/></span>
+    </div>
 
+    
 
 
     
@@ -163,6 +170,21 @@ div .buttonWrap2 button {margin: 3px; font-size: 3em; width: 9em; height: 4em; f
    
    }
    
+    
+     document.documentElement.addEventListener('touchstart', function (event) {
+     if (event.touches.length > 1) {
+          event.preventDefault(); 
+        } 
+    }, false);
+
+var lastTouchEnd = 0; 
+
+document.documentElement.addEventListener('touchend', function (event) {
+     var now = (new Date()).getTime();
+     if (now - lastTouchEnd <= 300) {
+          event.preventDefault(); 
+        } lastTouchEnd = now; 
+    }, false);
    
    </script>
 </html>
