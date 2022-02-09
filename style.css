@@ -17,7 +17,18 @@ img {
   max-width: 100%;
   
 }
-#icon img {
+.icon img {
   height: 150px;
   width: 150px;
+}
+
+button {
+  height: 200px;
+  width: 200px;
+  padding: 6px;
+  margin: 6px;
+}
+
+.box{
+  text-align: center;
 }
