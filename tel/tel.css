@@ -1,9 +1,9 @@
 input {
-    height: 150px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
     padding: 5px;
     margin: 5px;
-    font-size: 1.5em;
+    font-size: 0.5em;
 }
 
 body {
@@ -17,12 +17,14 @@ img {
 
 button {
     height: 150px;
-    width: 125px;
-    margin: 5px;
-    padding: 5px;
+    width: 100px;
+    margin: 3px;
+    padding: 3px;
+    background-color: rgba(104, 99, 101, 0.301);
+    border: none;
 }
 .icon {
-    font-size: 1em;
+    font-size: 0.5em;
     font-weight: 600;
     text-align: center;
 
