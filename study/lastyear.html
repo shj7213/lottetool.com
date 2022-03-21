@@ -18,6 +18,18 @@
    <button onclick="show()">계산</button>
    <div id="year"></div>
     
+   <h3>영향율</h3>
+   <form>
+    전년比 차액<br> 
+    <input type="number"  id="yy"><br>
+    전년매출 <br>
+   <input type="number" id="buy">
+    </form>
+   <br>
+   <button onclick="show2()">계산</button>
+   <div id="year2"></div> 
+ 
+
 
  <script>
      function show(){
@@ -26,6 +38,15 @@
      let year = sell / (1+(up/100));
 
      document.querySelector("#year").innerHTML ="전년 매출은 "+Math.round(year)+" 입니다.";
+     }
+
+     function show2(){
+     let yy = document.querySelector("#yy").value;
+     let buy = document.querySelector("#buy").value;
+     let year2 = (yy / buy) *100;
+     year2 = year2.toFixed(1)
+
+     document.querySelector("#year2").innerHTML ="영향율은 "+(year2)+" % 입니다.";
      }
      </script>   
 </body>
