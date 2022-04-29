@@ -6,7 +6,7 @@ body {margin: 0;}
 #keyword {font-size: 1.2em; width:180px;}
 #keyword2 {font-size: 1.2em; width:180px;}
 
-
+table#user-table thead { position: sticky; top: 0; }
 
 #user-table {border-collapse: collapse;}
 #user-table > thead > tr { background-color: #333; color:#fff; }
