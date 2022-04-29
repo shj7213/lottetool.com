@@ -1,7 +1,7 @@
 body {margin: 0;}
 #container {width: 100%; margin: 0 auto;}
 #container #input-form {text-align: center;}ild
-#user-table {width: 98%; margin: 0 auto; text-align: center; font-size:0.4em;}
+#user-table {width: 100%; margin: 0 auto; text-align: center; font-size:0.4em;}
 #input-form {margin-top: 10px; margin-bottom: 10px;}
 #keyword {font-size: 1.5em;}
 #keyword2 {font-size: 1.5em;}
