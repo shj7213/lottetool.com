@@ -1,7 +1,7 @@
 body {margin: 0;}
 #container {width: 100%; margin: 0 auto;}
 #container #input-form {text-align: center;}ild
-#user-table {width: 100%; margin: 0 auto; text-align: center; font-size:0.5em;}
+#user-table {width: 98%; margin: 0 auto; text-align: center; font-size:0.4em;}
 #input-form {margin-top: 10px; margin-bottom: 10px;}
 #keyword {font-size: 1.5em;}
 #keyword2 {font-size: 1.5em;}
@@ -10,5 +10,5 @@ body {margin: 0;}
 #user-table {border-collapse: collapse;}
 #user-table > thead > tr { background-color: #333; color:#fff; }
 #user-table > thead > tr > th { padding: 2px; width: 30px; }
-#user-table > tbody > tr > td { border-bottom: 1px solid gray; padding:2px; }
+#user-table > tbody > tr > td { border-bottom: 1px solid gray; padding:1.5px; }
 #user-table > tbody > tr > td:nth-child(5) {background-color:yellow;}
