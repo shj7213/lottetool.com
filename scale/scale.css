@@ -3,8 +3,9 @@ body {margin: 0;}
 #container #input-form {text-align: center;}ild
 #user-table {width: 100%; margin: 0 auto; text-align: center; font-size:1em;}
 #input-form {margin-top: 10px; margin-bottom: 10px;}
-#keyword {font-size: 1.em;}
-#keyword2 {font-size: 1em;}
+#keyword {font-size: 1.2em; width:180px;}
+#keyword2 {font-size: 1.2em; width:180px;}
+
 
 
 #user-table {border-collapse: collapse;}
