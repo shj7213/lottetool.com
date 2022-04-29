@@ -12,8 +12,8 @@
 
 <div id="container">
 <div id="input-form">
-상품명: <input type="text"id="keyword"/><br>
-**💡 검색은 대략의 상품명으로 띄어 쓰기 없이 입력하세요.**<br>
+판매코드: <input type="text"id="keyword"/><br>
+**💡 검색은 판매코드 뒷자리 4자리정도 입력해 **<br>
 개수: <span class="count"></span>
 
 </div>
@@ -2159,7 +2159,7 @@
     $("#keyword").keyup(function() {
          var k = $(this).val();
          $("#user-table > tbody > tr").hide();
-         var temp = $("#user-table > tbody > tr > td:nth-child(5n+4):contains('" + k + "')");
+         var temp = $("#user-table > tbody > tr > td:nth-child(5n+2):contains('" + k + "')");
 
          $(temp).parent().show();
          $('.count').text(temp.length);                
