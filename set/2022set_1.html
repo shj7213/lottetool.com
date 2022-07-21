@@ -44,7 +44,7 @@
         <h2>①~⑦까지 순서대로 넣으시고 계산버튼을 누르시면 됩니다.<br> 내용이 없으면 비워 두십시오.</h2>
         <h2 class="set">⑤~⑦까지는 반드시 협의후 입력하세요.</h2>
         <h2><a href="http://mlotte.kr/904">❤❤❤세트예약집 보기❤❤❤</a></h2>
-        <p>▧ 사전예약기간 : 7월21일(목) ~ 8월31일(수)</p>
+        <p>▧ 사전예약기간 : 1차 7월 21일(목) ~ 8월 17일(수) 28일간</p>
 	    
         <p>▧ 해당카드:롯데,비씨,KB국민,신한,HN농협,현대,삼성,하나,우리,광주 (10개)</p>
         <p>▧ 상품권 증정 안내: 30만원이상 3만원, 50만원~100만원미만 5만원<br>
@@ -128,8 +128,8 @@ function addComma(num) {
     var ct_3 = document.querySelector("#ct_3").value; //전체구매수량
 
     var gt_1 = document.querySelector("#gt_1").value; //N값
-    var gt_2 = document.querySelector("#gt_1").value; //N값
-    var gt_3 = document.querySelector("#gt_1").value; //N값
+    var gt_2 = document.querySelector("#gt_2").value; //N값
+    var gt_3 = document.querySelector("#gt_3").value; //N값
 
     var gg_1 = document.querySelector("#gg_1").value; //추가증정
     var gg_2 = document.querySelector("#gg_2").value; //추가증정
@@ -191,7 +191,12 @@ function addComma(num) {
     var cash_1 = (savePrice_1 * gc_1 ); // 결재금액
     var cash_2 = (savePrice_2 * gc_2 ); // 결재금액
     var cash_3 = (savePrice_3 * gc_3 ); // 결재금액
-    var cash = (cash_1 + cash_2 + cash_3) // 최종결재 금액
+    var cash = (cash_1 + cash_2 + cash_3); // 최종결재 금액
+
+
+    var lc_1 = (cash_1 / (ct_1*1)) ; //  할인가
+    var lc_2 = (cash_2 / (ct_2*1)) ; //  할인가
+    var lc_3 = (cash_3 / (ct_3*1)) ; //  할인가
 
 
     let ans = cash; //상품권 증정내용
@@ -215,9 +220,17 @@ function addComma(num) {
     }
     
     document.querySelector("#showResult").innerHTML = "상품의 할인전 가격은 " +addComma(Math.round((op_1 * ct_1)+(op_2 * ct_2)+(op_3 * ct_3)))+"원 입니다.<br>"
-    +addComma(Math.round(((op_1 * ct_1)+(op_2 * ct_2)+(op_3 * ct_3)) - cash))+ "원 할인 되었습니다.<br>  결재금액은" +addComma(Math.round(cash))+ "원 입니다.<br> 할인가) A의 할인가는 " +addComma(Math.round((cash_1  / ct_1)))+ "원 <br> B의 할인가는 " 
-    +addComma(Math.round((cash_2  / ct_2)))+ "원 <br> C의 할인가는 " +addComma(Math.round((cash_3  / ct_3)))+ "원 입니다.<br> 상품별 금액) A는"+addComma(Math.round(cash_1))+ "원 입니다.<br>B는"
-    +addComma(Math.round(cash_2))+ "원 입니다.<br> C는"+addComma(Math.round(cash_3))+ "원 입니다.<br>";
+    +addComma(Math.round(((op_1 * ct_1)+(op_2 * ct_2)+(op_3 * ct_3)) - cash))+ "원 할인 되었습니다.<br>  결재금액은" 
+    +addComma(Math.round(cash))+ "원 입니다.<br> ***할인가***<br>●A: 할인가 " 
+    +addComma(Math.round(lc_1))+ "원 <br>●B: 할인가 " 
+    +addComma(Math.round(lc_2))+ "원 <br>●C: 할인가 " 
+    +addComma(Math.round(lc_3))+ "원 입니다.<br> ***상품별 금액***<br>●A: "
+    +addComma(Math.round(cash_1))+ "원 입니다.<br>●B: "
+    +addComma(Math.round(cash_2))+ "원 입니다.<br>●C: "
+    +addComma(Math.round(cash_3))+ "원 입니다.<br>***상품별 증정수량***<br>●A: "
+    +addComma(Math.round(gift_1))+ "개 입니다.<br>●B: "
+    +addComma(Math.round(gift_2))+ "개 입니다.<br>●C: "
+    +addComma(Math.round(gift_3))+ "개 입니다.<br>";
   
 }
  
