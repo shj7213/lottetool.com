@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="scan.js"></script>
+</head>
+<body>
+</body>
+<script>
+$(document).scannerDetection({ 
+    timeBeforeScanTest: 200, // wait for the next character for upto 200ms 
+    startChar: [120], // Prefix character for the cabled scanner (OPL6845R) 
+    endChar: [13], // be sure the scan is complete if key 13 (enter) is detected 
+    avgTimeByChar: 40, // it's not a barcode if a character takes longer than 40ms 
+    onComplete: function(barcode, qty){
+
+        alert(barcode); // 바코드 출력 
+
+    }
+}); 
+</script>
+</html>
