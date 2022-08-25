@@ -42,7 +42,7 @@
     </head>
     <body>    
         
-        <p>▧ 사전예약기간 ▧<br>2차: 8월 18일(목) ~ 8월 24일(수) 7일간</p>
+        <p>▧ 사전예약기간 ▧<br>2차: 8월 25일(목) ~ 8월 31일(수) 7일간</p>
 	    
         <p>▧ 해당카드 ▧<br><img src="card.png" width="50%"></p>
         <!--<p>▧ 사전예약 상품권 증정 안내 ▧<br>30만원이상 3만원, 50만원~100만원미만 5만원<br>
@@ -206,17 +206,17 @@ function addComma(num) {
         if(ans < 100000){
             document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
     }else if(ans >= 100000 && ans < 200000){
-        document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
+        document.querySelector("#showResult1").innerHTML =("상품권 5천원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
     }else if(ans >= 200000 && ans < 300000){
-        document.querySelector("#showResult1").innerHTML =("상품권 3만원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
+        document.querySelector("#showResult1").innerHTML =("상품권 1만원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
     }else if(ans >= 300000 && ans < 500000){
-        document.querySelector("#showResult1").innerHTML =("상품권 5만원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
+        document.querySelector("#showResult1").innerHTML =("상품권 1만원 5천원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
     }else if(ans >= 500000 && ans < 1000000){
-        document.querySelector("#showResult1").innerHTML =("100만원 당 상품권 10만원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
+        document.querySelector("#showResult1").innerHTML =("상품권 2만원 5천원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
     }else if(ans >= 1000000 && ans < 10000000){
-        document.querySelector("#showResult1").innerHTML =("100만원 당 10만원 상품권 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
+        document.querySelector("#showResult1").innerHTML =("100만원 당 5만원 상품권 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");
     }else if(ans >= 10000000){
-        document.querySelector("#showResult1").innerHTML =("상품권 100만원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");      
+        document.querySelector("#showResult1").innerHTML =("상품권 50만원 증정 입니다.<br> 제외 상품이 있는지 확인 바랍니다.");      
     }
      else{
         document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
