@@ -94,6 +94,7 @@
 <button onclick="ShowPrice()"   >계산</button>
 <div id="showResult"></div>
 <div id="showResult1"></div>
+	    <div id="showResult2"></div>
 <p>소수점 제거 및 원단위 절삭으로<br>계산값과 실제 계산과 다소 차이가 있을 수 있으니<br> 참조용으로 사용 바랍니다.</p>
 <p>★세트 계산기의 사용에 따른 책임은 사용자에게 있습니다.★</p>
 <p>문의사항은 영남동부 울산점 영업M</p>
@@ -220,6 +221,16 @@ function addComma(num) {
      else{
         document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
     }
+	
+ let ans1 = cash; //상품권 증정내용
+        if(ans1 < 2000000){
+            document.querySelector("#showResult2").innerHTML =("");
+	}
+	else {
+		document.querySelector("#showResult2").innerHTML =("포인트 1% 적립대상 확인");
+	}
+	    
+	    
     
     document.querySelector("#showResult").innerHTML = "상품의 할인전 가격은 " +addComma(Math.round((op_1 * ct_1)+(op_2 * ct_2)+(op_3 * ct_3)))+"원 입니다.<br>"
     +addComma(Math.round(((op_1 * ct_1)+(op_2 * ct_2)+(op_3 * ct_3)) - cash))+ "원 할인 되었습니다.<br>  결재금액은" 
