@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Document</title>
+    <script type="text/javascript" src="quiz.js"></script>
+</head>
+<body>
+    <div class="grid">
+        <h1>매장 퀴즈</h1>
+        <P>천천히 읽어 보시고 풀어보세요</P>
+        <div id="quiz">
+           <p id="question"></p>
+     
+           <div class="buttons">
+              <button class="btn"></button>
+              <button class="btn"></button>
+     
+           </div>
+     
+           <footer>
+              <p id="progress">진행 정보</p>
+           </footer>
+           
+        </div>     
+</body>
+
+<script type="text/javascript">
+   
+   // 문제 객체(생성자 함수)
+function Question(text, choice, answer) {
+    this.text = text; // 질문 텍스트
+    this.choice = choice; // 선택할 답들(배열)
+    this.answer = answer; // 정답 정보
+ }
+ 
+ // 퀴즈 정보 객체
+ function Quiz(questions) {
+    this.score = 0; // 점수
+    this.questions = questions; // 문제
+    this.questionIndex = 0; // 문제 번호
+ }
+ 
+ // 정답 확인 메서드
+ Quiz.prototype.correctAnswer = function(answer) {
+    return answer == this.questions[this.questionIndex].answer;
+ }
+ 
+ var questions = [
+    new Question('직원식당의 위치는?', ['없다', '지하2층에 있다'], '지하2층에 있다'),
+    new Question('직원주차 위치는?', ['아무곳에 주차하면 된다', '4층에 직원주차 공간이 있다'], '4층에 직원주차 공간이 있다'),
+    new Question('지하1층 매장에 화장실이 있다?', ['O', 'X'], 'X'),
+    new Question('시식할 때 반지착용이 가능하다?', ['O', 'X'], 'X'),
+    new Question('높은 곳의 물건을 꺼낼때 반드시 주변 사다리를 이용한다?', ['O', 'X'], 'O'),
+    new Question('고객과 약속을 했으면 담당에게 반드시 알린다?', ['O', 'X'], 'O'),
+    new Question('상품에 가격표가 없으면 모른채 한다?', ['O', 'X'], 'X'),
+    new Question('고객응대시 아이에게는 친근하게 반말로 한다?', ['O', 'X'], 'X'),
+    new Question('구매하지 않은 고객에게는 인사하지 않는다?', ['O', 'X'], 'X'),
+    new Question('고객이 찾는 상품이 매장에 상품이 없는경우?', ['무조건 없다고 한다', '담당자에게 확인 후에 응대한다'], '담당자에게 확인 후에 응대한다'),
+    new Question('고객이 욕을 한다면?', ['무조건 잘못했다고 사과한다', '담당자에게 알리고 거부 의사를 밝힌다'], '담당자에게 알리고 거부 의사를 밝힌다'),
+    new Question('몸이 불편한 고객이 도움을 요청한다면?', ['담당에게 도움을 요청한다', '거절한다'], '담당에게 도움을 요청한다'),
+    new Question('조리 중인 경우에도 고객응대를 위해 자리를 이동해도 된다?', ['O', 'X'], 'X'),
+    new Question('진열중일 경우 고객응대를 하지 않아도 된다?', ['O', 'X'], 'X'),
+    new Question('엘리베이터 이용 방법?', ['눈치껏 탄다', '지하1층 이용은 금지되어 있습니다. 상품운반은 가능합니다.'], '지하1층 이용은 금지되어 있습니다. 상품운반은 가능합니다.'),
+    new Question('근무 중 쇼핑해야 할 상품이 있는경우?', ['아무때나 가능', '직원쇼핑 시간을 준수해야 한다'], '직원쇼핑 시간을 준수해야 한다'),
+    new Question('고객이 내가 모르는 것을 물어 볼 때?', ['모른다고 솔직하게 말한다', '주변에 직원들에게 도움을 요청해서 끝까지 응대한다'], '주변에 직원들에게 도움을 요청해서 끝까지 응대한다'),
+    new Question('바닥에 쓰레기가 떨어져 있다면?', ['모른척 한다', '주변담당에게 알리고 조치를 할 수 있도록 한다'], '주변담당에게 알리고 조치를 할 수 있도록 한다'),
+    new Question('시식도구는 매장에서 가져와서 사용해도 된다?', ['O', 'X'], 'X'),
+    new Question('휴게실 사용은 어떻게 하는가?', ['지정된 휴게시설이 없으니 아무곳에서 쉬면된다', '지하2층에 지정된 휴게시설이 있으니 사용하면 된다'], '지하2층에 지정된 휴게시설이 있으니 사용하면 된다')
+ ];
+ 
+ // 퀴즈 객체 생성
+ var quiz = new Quiz(questions);
+ 
+ // 문제 출력 함수
+ function updateQuiz() {
+    var question = document.getElementById('question');
+    var idx = quiz.questionIndex + 1;
+    var choice = document.querySelectorAll('.btn');
+ 
+    // 문제 출력
+    question.innerHTML = '문제' + idx + ') ' + quiz.questions[quiz.questionIndex].text;
+ 
+    // 선택 출력
+    for (var i = 0; i < 2; i++) {
+       choice[i].innerHTML = quiz.questions[quiz.questionIndex].choice[i];
+    }
+ 
+    progress();
+ }
+ 
+ function progress() {
+    var progress = document.getElementById('progress');
+    progress.innerHTML = '문제 ' + (quiz.questionIndex + 1) + '/ ' + quiz.questions.length;
+ }
+ 
+ var btn = document.querySelectorAll('.btn');
+ 
+ // 입력 및 정답 확인 함수
+ function checkAnswer(i) {
+    btn[i].addEventListener('click', function() {
+       var answer = btn[i].innerText;
+ 
+       if (quiz.correctAnswer(answer)) {
+   ('정답입니다!');
+          quiz.score++;
+       } else {
+         ('틀렸습니다!');
+       }
+ 
+       if (quiz.questionIndex < quiz.questions.length - 1) {
+          quiz.questionIndex++;
+          updateQuiz();
+       } else {
+          result();
+       }
+    });
+ }
+ 
+ function result() {
+    var quizDiv = document.getElementById('quiz');
+    var per = parseInt((quiz.score * 100) / quiz.questions.length);
+    var txt = '<h1>결과</h1>' + '<h2 id="score">당신의 점수: ' + quiz.score + '/' + quiz.questions.length + '<br><br>' + per + '점' + '</h2>';
+ 
+    quizDiv.innerHTML = txt;
+ 
+    // 점수별 결과 텍스트
+    if (per < 60) {
+       txt += '<h2>더 분발하세요</h2>';
+       quizDiv.innerHTML = txt;
+    } else if (per >= 60 && per < 80) {
+       txt += '<h2>무난한 점수네요</h2>'
+       quizDiv.innerHTML = txt;
+    } else if (per >= 80) {
+       txt += '<h2>훌륭합니다</h2>'
+       quizDiv.innerHTML = txt;
+    }
+ }
+ 
+ for (var i = 0; i < btn.length; i++) {
+    checkAnswer(i);
+ }
+ 
+ updateQuiz();
+</script>
+</html>
