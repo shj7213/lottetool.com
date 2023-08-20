@@ -1,5 +1,5 @@
 body {
-    font-size: 2em;
+    font-size: 0.5em;
  }
  
  .grid {
@@ -14,7 +14,7 @@ body {
  
  .grid h1 {
     color: #333;
-    font-size: 2.0em;
+    font-size: 1.5em;
     text-align: center;
     ;
  }
@@ -23,12 +23,12 @@ body {
     padding: 10px 2em;
     background: salmon;
     border-radius: 15px;
-    font-size: 24px;
+    font-size: 2em;
     color: #fff;
  }
  
  #quiz {
-    text-align: center;
+    text-align: left;
  }
  
  #progress {
@@ -43,7 +43,7 @@ body {
  }
  
  .btn {
-    margin: 10px 40px 20px 0;
+    margin: 10px 40px 20px -13px;
     padding: 10px;
     width: 250px;
     font-size: 16px;
@@ -53,6 +53,7 @@ body {
     border-radius: 15px;
     cursor: pointer;
     transition: all .2s;
+    text-align:left;
  }
  
  .btn:nth-child(2n) {
