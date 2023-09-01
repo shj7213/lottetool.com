@@ -66,6 +66,7 @@
 
         #pp{
             margin: 10px;
+            text-align: center;
         }
     </style>
 
@@ -100,8 +101,10 @@
      
    <div id="oo"> <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="op_1" autofocus style="width: 200px; height: 40px; text-align: center;">
 
-    <button onclick="createBarcode()" style="width: 100px; height: 40px;">바코드생성</button></div>
-
+    <button onclick="createBarcode()" style="width: 100px; height: 40px;">바코드생성</button>
+    <button onclick="window.location.reload()" style="width: 100px; height: 40px;">지우기</button>
+</div>
+      
 
 <!-- [바코드가 생성될 div 선언 실시] -->
 <div id="parent" style="width: 400px; height: 200px; margin: 0 auto; position: relative; top: 2%; left: 0%; border:1px solid #000;">
