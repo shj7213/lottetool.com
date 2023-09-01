@@ -59,6 +59,14 @@
             
             margin: 0 auto;
         }
+        #oo{
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        #pp{
+            margin: 10px;
+        }
     </style>
 
 
@@ -85,13 +93,14 @@
 <!-- [body 콘텐츠 작성] -->
 <body>
 
-    <p>바코드가 필요할때 사용하세요!</p>
-    <P>불러주는 숫자를 입력하고 바코드생성을 누르세요!</P>
+   <div id="pp"> <p>바코드가 필요할때 사용하세요!</p>
+    <P>불러주는 숫자를 입력하고 바코드생성을 누르세요!</P></div>
+</br>
 
      
-    <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="op_1" autofocus style="width: 200px; height: 40px; text-align: center;">
+   <div id="oo"> <input type="number" name='userPhoneNumber' pattern='\d*' onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="op_1" autofocus style="width: 200px; height: 40px; text-align: center;">
 
-    <button onclick="createBarcode()" style="width: 100px; height: 40px;">바코드생성</button>
+    <button onclick="createBarcode()" style="width: 100px; height: 40px;">바코드생성</button></div>
 
 
 <!-- [바코드가 생성될 div 선언 실시] -->
