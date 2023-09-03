@@ -8,21 +8,27 @@
     <script type="text/javascript" src="quiz.js"></script>
 </head>
 <body>
-    <div class="grid">
-        <h1>퀴즈</h1>
-        <div id="quiz">
-           <p id="question"></p>
-     
-           <div class="buttons">
-              <button class="btn"></button>
-              <button class="btn"></button>
-     
-           </div>
-     
-           <footer>
-              <p id="progress">진행 정보</p>
-           </footer>
-        </div>     
+   <div class="grid">
+      <h1>매장 퀴즈</h1>
+      <P>천천히 읽어 보시고 부담없이 풀어보세요</P>
+      <p>함께 일하게 되어 반갑습니다.</p>
+      <p>저장 기능 없습니다.</p>
+      
+      <div id="quiz">
+         <p id="question"></p>
+   
+         <div class="buttons">
+            <button class="btn"></button>
+            <button class="btn"></button>
+   
+         </div>
+   
+         <footer>
+            <p id="progress">진행 정보</p>
+         </footer>
+         
+      </div>   
+      <button style="width: 100px; height: 50px; background-color: beige; font-size: 1em; text-align: center;"><span class="but"><a href="in.html">홈으로</a></span></button>  
 </body>
 
 <script type="text/javascript">
@@ -58,6 +64,16 @@ function Question(text, choice, answer) {
     new Question('화상을 입었을 경우 응급조치?', ['된장을 바른다', '냉수를 적신 타올로 상처를 감싼다'], '냉수를 적신 타올로 상처를 감싼다'),
     new Question('오작동으로 비상벨이 울렸을 경우?', ['모른척 한다', '주변사람들이 당황하지 않도록 안내한다'], '주변사람들이 당황하지 않도록 안내한다'),
     new Question('매장에 쓰러진 고객 발견시?', ['환자상태 확인후 119신고', '모른척 한다'], '환자상태 확인후 119신고'),
+    new Question('화재발생시 엘리베이터 이용방법?', ['타고 이동한다', '엘리베이터는 위험하니 비상구로 이동한다'], '엘리베이터는 위험하니 비상구로 이동한다'),
+    new Question('매장 마감시 전기사용?', ['켜두고 가면 누군가 끈다', '콘센트 제거후 퇴근한다'], '콘센트 제거후 퇴근한다'),
+    new Question('소화전 관리방법?', ['소화전앞에는 상품을 적재하지 않는다', '자주 사용하지 않기 때문에 상품적재를 해도 괜찮다'], '소화전앞에는 상품을 적재하지 않는다'),
+    new Question('무빙워크 사용방법?', ['상품운반시에 사용 가능하다', '무빙워크로는 상품운반이 불가하다'], '무빙워크로는 상품운반이 불가하다'),
+    new Question('화재발생시 적절한 조치방법은?', ['초기진화가 가능하면 소화기로 진행한고 빠르게 알린다', '모른척 한다'], '초기진화가 가능하면 소화기로 진행한고 빠르게 알린다'),
+    new Question('전기사용 방법으로 옳은것?', ['꽂을때가 없으면 멀티탭을 무한정 연결한다', '규정된 용량의 전기를 사용하고 시설담당자에게 문의한다'], '규정된 용량의 전기를 사용하고 시설담당자에게 문의한다'),
+    new Question('흡연 방법?', ['아무곳에서나 흡연이 가능하다', '지정된 흡연장소 이외에서는 흡연이 불가하다'], '지정된 흡연장소 이외에서는 흡연이 불가하다'),
+    new Question('엘리베이터에 갖혔을 때?', ['비상벨을 눌러 도움을 요청하고 기다린다', '억지로 문을 열고 탈출한다'], '비상벨을 눌러 도움을 요청하고 기다린다'),
+    new Question('작업중 사고예방 방법?', ['가벼운 스트레칭이 필요하다', '급하니까 바로 업무에 임한다'], '가벼운 스트레칭이 필요하다'),
+    new Question('AED(자동심장충격기)의 위치는?', ['비싸서 구비하고 있지 않다', '1층 안내데스크앞에 비치되어 있습니다.'], '1층 안내데스크앞에 비치되어 있습니다.'),    
     new Question('높은곳의 상품을 꺼낼경우?', ['아무거나 밟고 올라간다', '지정된 사다리를 반드시 이용해서 꺼낸다'], '지정된 사다리를 반드시 이용해서 꺼낸다'),    
     new Question('상품운반도구 사용방법?', ['높이에 상관없이 실어도 된다', '앞이 보일정도만 실어서 운반한다'], '앞이 보일정도만 실어서 운반한다')
  ];

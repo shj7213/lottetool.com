@@ -64,4 +64,9 @@ body {
     background: #c34c74;
     color: #fff;
  }
- 
+
+
+.but {
+   width: 150px;
+   height: 150px;
+}
