@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="quiz.css">
-    <title>Document</title>
+    <title>안전퀴즈</title>
     <script type="text/javascript" src="quiz.js"></script>
 </head>
 <body>
@@ -28,7 +28,7 @@
          </footer>
          
       </div>   
-      <button style="width: 100px; height: 50px; background-color: beige; font-size: 1em; text-align: center;"><span class="but"><a href="in.html">홈으로</a></span></button>  
+        
 </body>
 
 <script type="text/javascript">
@@ -135,13 +135,13 @@ function Question(text, choice, answer) {
  
     // 점수별 결과 텍스트
     if (per < 60) {
-       txt += '<h2>더 분발하세요</h2>';
+       txt += '<h2>더 분발하세요</h2><br><button style="width: 100px; height: 50px; background-color: beige; font-size: 1em; text-align: center;"><span class="but"><a href="out.html">나가기</a></span></button>';
        quizDiv.innerHTML = txt;
     } else if (per >= 60 && per < 80) {
-       txt += '<h2>무난한 점수네요</h2>'
+       txt += '<h2>무난한 점수네요</h2><br><button style="width: 100px; height: 50px; background-color: beige; font-size: 1em; text-align: center;"><span class="but"><a href="out.html">나가기</a></span></button>'
        quizDiv.innerHTML = txt;
     } else if (per >= 80) {
-       txt += '<h2>훌륭합니다</h2>'
+       txt += '<h2>훌륭합니다</h2><br><button style="width: 100px; height: 50px; background-color: beige; font-size: 1em; text-align: center;"><span class="but"><a href="out.html">나가기</a></span></button>'
        quizDiv.innerHTML = txt;
     }
  }
