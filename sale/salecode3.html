@@ -179,10 +179,10 @@ function sale(event) {
       
      var first1 = "010";
      var first2 = document.querySelector("#op_1").value;
-     var first3 = "9112";
+     var first3 = "9152";
      var first4 ="00000";
      var first5 = $('input[name=sale_1]:checked').val();
-     var first6 ="7";
+     var first6 ="00000007";
      var str =first1+first2+first3+first4+first5+first6; 
      document.getElementById("result1").innerHTML =str
     
@@ -211,7 +211,7 @@ function sale(event) {
 
         var barcodeData = first1+document.querySelector("#op_1").value+first3+first4+$('input[name=sale_1]:checked').val()+first6; // [바코드 생성 데이터]
 
-        var barcodeType = "code93"; // [생성할 바코드 타입 지정 실시]
+        var barcodeType = "code11"; // [생성할 바코드 타입 지정 실시]
 
         var barcodeSetting = { // [생성할 바코드 스타일 설정]
 
