@@ -108,53 +108,10 @@
     <button onclick="createBarcode()" style="width: 100px; height: 40px;">바코드생성</button>
     <button onclick="window.location.reload()" style="width: 70px; height: 40px;">지우기</button>
 </div>
-<div id="ooo_1">
-    <input type='radio'
-name='sale_1' 
-value='5' 
-onclick='sale(event)'/>5
-<input type='radio' 
-name='sale_1' 
-value='10' 
-onclick='sale(event)'/>10
-<input type='radio'
-name='sale_1' 
-value='15' 
-onclick='sale(event)'/>15
-<input type='radio' 
-name='sale_1' 
-value='20' 
-onclick='sale(event)'/>20
-<input type='radio'
-name='sale_1' 
-value='25' 
-onclick='sale(event)'/>25
-<input type='radio' 
-name='sale_1' 
-value='30' 
-onclick='sale(event)'/>30
-
-<input type='radio'
-name='sale_1' 
-value='35' 
-onclick='sale(event)'/>35
-<input type='radio' 
-name='sale_1' 
-value='40' 
-onclick='sale(event)'/>40
-<input type='radio'
-name='sale_1' 
-value='45' 
-onclick='sale(event)'/>45
-<input type='radio'
-name='sale_1' 
-value='50' 
-onclick='sale(event)'/>50
-
-</div>
 
 
-<div id='result'></div>      
+<div id='result'></div>   
+<div id='result1'></div>   
 
 
 
@@ -176,14 +133,26 @@ function sale(event) {
     event.target.value;
 }
 
+var today = new Date();
+
+var year = today.getFullYear();
+var month = ('0' + (today.getMonth() + 1)).slice(-2);
+var day = ('0' + today.getDate()).slice(-2);
+
+var dateString = year + month + day;
+
+
+
       
-     var first1 = "010";
-     var first2 = document.querySelector("#op_1").value;
-     var first3 = "9152";
-     var first4 ="00000";
-     var first5 = $('input[name=sale_1]:checked').val();
-     var first6 ="00000005";
-     var str =first1+first2+first3+first4+first5+first6; 
+     var first1 = "601";
+     var first2 = dateString;
+     var first3 = "052";
+     var first3_1 = Math.floor((Math.random()*(9999-1000+1))+1000);
+     String(first3_1).padStart(4,"0");
+     var first4 ="00010000";
+     var first6 ="00000007";
+    
+     var str =first1+first2+first3+first3_1+first4; 
      document.getElementById("result1").innerHTML =str
     
     /* [바코드 생성 수행 실시] */
@@ -209,7 +178,7 @@ function sale(event) {
         // [바코드 생성 수행 실시]
         //var barcodeData = document.querySelector("#op_1").value; // [바코드 생성 데이터]
 
-        var barcodeData = first1+document.querySelector("#op_1").value+first3+first4+$('input[name=sale_1]:checked').val()+first6; // [바코드 생성 데이터]
+        var barcodeData = first1+first2+first3+first3_1+first4; // [바코드 생성 데이터]
 
         var barcodeType = "code128"; // [생성할 바코드 타입 지정 실시]
 
