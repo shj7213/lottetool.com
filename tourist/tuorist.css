@@ -9,5 +9,11 @@ button { width:22%; height: 40px; margin: 1px;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.5s;}
+    button:hover {
+        background-color: #0056b3;
+    }
 
+    button:active {
+        background-color: #003a80;
+    }
 p {font-weight: 800; font-size: large;}
