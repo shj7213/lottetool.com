@@ -126,3 +126,39 @@ function g_4(){
     var audio = document.getElementById("audio7_4");
     audio.play();
 }
+
+
+function h_1(){
+    var audio = document.getElementById("audio8_1");
+    audio.play();
+}
+function h_2(){
+    var audio = document.getElementById("audio8_2");
+    audio.play();
+}
+function h_3(){
+    var audio = document.getElementById("audio8_3");
+    audio.play();
+}
+function h_4(){
+    var audio = document.getElementById("audio8_4");
+    audio.play();
+}
+
+
+function i_1(){
+    var audio = document.getElementById("audio9_1");
+    audio.play();
+}
+function i_2(){
+    var audio = document.getElementById("audio9_2");
+    audio.play();
+}
+function i_3(){
+    var audio = document.getElementById("audio9_3");
+    audio.play();
+}
+function i_4(){
+    var audio = document.getElementById("audio9_4");
+    audio.play();
+}
