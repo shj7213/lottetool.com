@@ -162,3 +162,21 @@ function i_4(){
     var audio = document.getElementById("audio9_4");
     audio.play();
 }
+
+
+function j_1(){
+    var audio = document.getElementById("audio10_1");
+    audio.play();
+}
+function j_2(){
+    var audio = document.getElementById("audio10_2");
+    audio.play();
+}
+function j_3(){
+    var audio = document.getElementById("audio10_3");
+    audio.play();
+}
+function j_4(){
+    var audio = document.getElementById("audio10_4");
+    audio.play();
+}
