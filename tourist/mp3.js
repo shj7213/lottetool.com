@@ -69,3 +69,60 @@ function d_4(){
     var audio = document.getElementById("audio4_4");
     audio.play();
 }
+
+
+
+function e_1(){
+    var audio = document.getElementById("audio5_1");
+    audio.play();
+}
+function e_2(){
+    var audio = document.getElementById("audio5_2");
+    audio.play();
+}
+function e_3(){
+    var audio = document.getElementById("audio5_3");
+    audio.play();
+}
+function e_4(){
+    var audio = document.getElementById("audio5_4");
+    audio.play();
+}
+
+
+
+function f_1(){
+    var audio = document.getElementById("audio6_1");
+    audio.play();
+}
+function f_2(){
+    var audio = document.getElementById("audio6_2");
+    audio.play();
+}
+function f_3(){
+    var audio = document.getElementById("audio6_3");
+    audio.play();
+}
+function f_4(){
+    var audio = document.getElementById("audio6_4");
+    audio.play();
+}
+
+
+
+function g_1(){
+    var audio = document.getElementById("audio7_1");
+    audio.play();
+}
+function g_2(){
+    var audio = document.getElementById("audio7_2");
+    audio.play();
+}
+function g_3(){
+    var audio = document.getElementById("audio7_3");
+    audio.play();
+}
+function g_4(){
+    var audio = document.getElementById("audio7_4");
+    audio.play();
+}
