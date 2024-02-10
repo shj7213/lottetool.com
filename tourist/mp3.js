@@ -180,3 +180,21 @@ function j_4(){
     var audio = document.getElementById("audio10_4");
     audio.play();
 }
+
+
+function k_1(){
+    var audio = document.getElementById("audio11_1");
+    audio.play();
+}
+function k_2(){
+    var audio = document.getElementById("audio11_2");
+    audio.play();
+}
+function k_3(){
+    var audio = document.getElementById("audio11_3");
+    audio.play();
+}
+function k_4(){
+    var audio = document.getElementById("audio11_4");
+    audio.play();
+}
