@@ -68,6 +68,11 @@
             margin: 10px;
             text-align: center;
         }
+
+        
+
+
+
     </style>
 
 
@@ -98,12 +103,13 @@
     <P>오류없이 유통기한 입력합니다.</P></div>
 </br>
 
+
      
-   <div id="oo"> <input type="date" name='userPhoneNumber' pattern='\d*' onchange="createBarcode()" onKeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="op_1" autofocus style="width: 200px; height: 40px; text-align: center;">
+   <div id="oo"> <input type="date"  onchange="createBarcode()" id="op_1"  autofocus style="width: 200px; height: 40px; text-align: center;">
 
    
 </div>
-      
+<div id="bar"></div>
 
 <!-- [바코드가 생성될 div 선언 실시] -->
 <div id="parent" style="width: 400px; height: 200px; margin: 0 auto; position: relative; top: 2%; left: 0%; border:1px solid #000;">
@@ -118,9 +124,7 @@
 
 <script>
 
-      
 
-    
     
     /* [바코드 생성 수행 실시] */
     function createBarcode(){
@@ -143,9 +147,14 @@
 
         
         // [바코드 생성 수행 실시]
-        var barcodeData = document.querySelector("#op_1").value; // [바코드 생성 데이터]
+        var barcodeData1 = document.querySelector("#op_1").value; // [바코드 생성 데이터]
+        var str = document.querySelector("#op_1").value;
+        var gg = str.replace(/-/g, '');
 
-        var barcodeType = "code39"; // [생성할 바코드 타입 지정 실시]
+
+        var barcodeData = gg
+
+        var barcodeType = "code128"; // [생성할 바코드 타입 지정 실시]
 
         var barcodeSetting = { // [생성할 바코드 스타일 설정]
 
