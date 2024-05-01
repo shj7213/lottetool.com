@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>소비기한 확인</title>
+</head>
+<body>
+<div><input id="input_data" type="date" onchange="input()"></div>
+
+<h2>남은 소비기한</h2>
+<h3 id="accent">일</h3>
+
+<p>▽소비기한 참조사항▽</p>
+
+<div id="anss"></div>
+</body>
+
+
+
+
+
+<script>
+    const now = new Date();
+
+    function input(){
+        const dday = new Date(document.querySelector("#input_data").value);
+        const passedTime = dday.getTime()-now.getTime();
+        const passedDay = Math.round(passedTime/(24*60*60*1000));
+        document.querySelector("#accent").innerHTML = passedDay+ 1 +"일";
+
+    console.log(passedDay);
+    
+    let ans = passedDay +1 ; //상품권 증정내용
+    
+    if(ans <= 1 ){
+            document.querySelector("#anss").innerHTML =("즉시철수/폐기");
+    }else if(ans > 1 && ans == 2){
+            document.querySelector("#anss").innerHTML = ("우유, 생막걸리 할인 그외 철수");
+    }else if(ans >= 2 && ans < 8 ){
+            document.querySelector("#anss").innerHTML = ("자연치즈 할인 냉동/상온상품 즉시철수");
+    }else if(ans >= 8 && ans < 10 ){
+            document.querySelector("#anss").innerHTML = ("냉동/상온상품 즉시철수");
+    }else if(ans >= 10 && ans < 16 ){
+            document.querySelector("#anss").innerHTML = ("냉장 정상판매 치즈(자연치즈 외)할인 , 냉동/상온상품 할인");
+    }else if(ans >= 16 && ans < 31 ){
+            document.querySelector("#anss").innerHTML = ("냉장상품 정상판매, 냉동/상온상품 할인");
+    }
+        
+     else{
+        document.querySelector("#anss").innerHTML =("정상판매");
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    }
+
+    
+
+
+
+
+
+
+</script>
+
+
+
+
+</html>
