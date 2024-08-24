@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="juso.css">
     <title>우편번호 검색</title>
-    <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script type="text/JavaScript" src="jquery-3.2.1.min.js" ></script>
+                <script language="javascript">
         
-        <script language="javascript">
         function getAddrLoc(){
             // 적용예 (api 호출 전에 검색어 체크) 	
             if (!checkSearchedWord(document.form.keyword)) {
@@ -40,7 +40,7 @@
         
         function makeList(xmlStr){
             var htmlStr = "";
-            htmlStr += "<table>";
+            htmlStr += "<table><thead><tr><th>구주소</th><th>도로명주소</th><th>우편번호</th></tr></thead>";
             $(xmlStr).find("juso").each(function(){
                 htmlStr += "<tr>";
                 htmlStr += "<td>"+$(this).find('roadAddr').text()+"</td>";
@@ -117,9 +117,10 @@
         <title>Insert title here</title>
         </head>
         <body>
+            <h3>주소검색(구주소, 도로명주소, 우편번호)</h3>
         <form name="form" id="form"method="post">
         <input type="text" name="currentPage" value="1"/> <!-- 요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
-        <input type="text" name="countPerPage" value="10"/><!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) --> 
+        <input type="text" name="countPerPage" value="30"/><!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) --> 
         <input type="text" name="confmKey" id="confmKey" style="width:250px;display:none" value="U01TX0FVVEgyMDI0MDgyNDE1MTIzNTExNTAzMzc="/><!-- 요청 변수 설정 (승인키) -->
         <input type="text" name="keyword" value="" onkeydown="enterSearch();"/><!-- 요청 변수 설정 (키워드) -->
         <input type="button" onClick="getAddrLoc();" value="주소검색하기"/>
