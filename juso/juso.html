@@ -40,15 +40,16 @@
         
         function makeList(xmlStr){
             var htmlStr = "";
-            htmlStr += "<table><thead><tr><th>구주소</th><th>도로명주소</th><th>우편번호</th></tr></thead>";
+            htmlStr += "<table><thead  bgcolor= pink ><tr><th>우편번호</th><th>구주소</th><th>도로명주소</th></tr></thead>";
             $(xmlStr).find("juso").each(function(){
                 htmlStr += "<tr>";
+                    htmlStr += "<td>"+$(this).find('zipNo').text()+"</td>";
                 htmlStr += "<td>"+$(this).find('roadAddr').text()+"</td>";
                 //htmlStr += "<td>"+$(this).find('roadAddrPart1').text()+"</td>";
                 //htmlStr += "<td>"+$(this).find('roadAddrPart2').text()+"</td>";
                 htmlStr += "<td>"+$(this).find('jibunAddr').text()+"</td>";
                 //htmlStr += "<td>"+$(this).find('engAddr').text()+"</td>";
-                htmlStr += "<td>"+$(this).find('zipNo').text()+"</td>";
+                
                 //htmlStr += "<td>"+$(this).find('admCd').text()+"</td>";
                 //htmlStr += "<td>"+$(this).find('rnMgtSn').text()+"</td>";
                 //htmlStr += "<td>"+$(this).find('bdMgtSn').text()+"</td>";
@@ -119,11 +120,13 @@
         <body>
             <h3>주소검색(구주소, 도로명주소, 우편번호)</h3>
         <form name="form" id="form"method="post">
-        <input type="text" name="currentPage" value="1"/> <!-- 요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
-        <input type="text" name="countPerPage" value="30"/><!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) --> 
+        <!--<input type="text" name="currentPage" value="1"/>  요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
+        <input type="text" name="countPerPage" value="30"/> <!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) --> 
         <input type="text" name="confmKey" id="confmKey" style="width:250px;display:none" value="U01TX0FVVEgyMDI0MDgyNDE1MTIzNTExNTAzMzc="/><!-- 요청 변수 설정 (승인키) -->
         <input type="text" name="keyword" value="" onkeydown="enterSearch();"/><!-- 요청 변수 설정 (키워드) -->
         <input type="button" onClick="getAddrLoc();" value="주소검색하기"/>
+        <br>
+        <p></p>
         <div id="list" ></div><!-- 검색 결과 리스트 출력 영역 -->
         </form>
         </body>
