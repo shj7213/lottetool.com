@@ -118,13 +118,14 @@
         <title>Insert title here</title>
         </head>
         <body>
-            <h3>주소검색(구주소, 도로명주소, 우편번호)</h3>
+            <h3>💎주소검색 1.0</h3>
+            <P>※구주소, 도로명주소, 우편번호 아무거나 검색 </P>
         <form name="form" id="form"method="post">
-        <!--<input type="text" name="currentPage" value="1"/>  요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
-        <input type="text" name="countPerPage" value="30"/> <!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) --> 
+        <input type="text" name="currentPage"  style="width:250px;display:none" value="1"/>  <!--요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
+        <input type="text" name="countPerPage" style="width:250px;display:none" value="50"/> <!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) --> 
         <input type="text" name="confmKey" id="confmKey" style="width:250px;display:none" value="U01TX0FVVEgyMDI0MDgyNDE1MTIzNTExNTAzMzc="/><!-- 요청 변수 설정 (승인키) -->
-        <input type="text" name="keyword" value="" onkeydown="enterSearch();"/><!-- 요청 변수 설정 (키워드) -->
-        <input type="button" onClick="getAddrLoc();" value="주소검색하기"/>
+        <input type="text" name="keyword" style="font-size: 18px; height: 25px;" value="" onkeydown="enterSearch();"/><!-- 요청 변수 설정 (키워드) -->
+        <input type="button" onClick="getAddrLoc();" style="height: 30px;" value="주소검색하기"/>
         <br>
         <p></p>
         <div id="list" ></div><!-- 검색 결과 리스트 출력 영역 -->
