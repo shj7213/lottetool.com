@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +40,7 @@
         
         function makeList(xmlStr){
             var htmlStr = "";
-            htmlStr += "<table><thead  bgcolor= pink ><tr><th>우편번호</th><th>도로명주소</th><th>구주소</th></tr></thead>";
+            htmlStr += "<table><thead  bgcolor= pink ><tr><th>우편번호</th><th>도로명주소</th><th>지번주소</th></tr></thead>";
             $(xmlStr).find("juso").each(function(){
                 htmlStr += "<tr>";
                     htmlStr += "<td>"+$(this).find('zipNo').text()+"</td>";
@@ -119,7 +119,7 @@
         </head>
         <body>
             <h3>💎주소검색 1.0</h3>
-            <P>※구주소, 도로명주소, 우편번호 아무거나 검색 </P>
+            <P>※지번주소, 도로명주소, 우편번호 아무거나 검색 </P>
         <form name="form" id="form"method="post">
         <input type="text" name="currentPage"  style="width:250px;display:none" value="1"/>  <!--요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
         <input type="text" name="countPerPage" style="width:250px;display:none" value="100"/> <!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) --> 
