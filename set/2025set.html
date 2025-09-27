@@ -43,11 +43,11 @@
     </head>
     <body>    
         
-      <!--  <h1>▧ 사전예약 1차 ▧<br> 9월13일(토) ~ 9월19일(금) <br>▧ 사전예약 2차 ▧<br> 9월20일(토) ~ 9월26일(금) </h1>
+        <!-- <h1>▧ 사전예약 1차 ▧<br> 9월13일(토) ~ 9월19일(금) <br>▧ 사전예약 2차 ▧<br> 9월20일(토) ~ 9월26일(금) </h1>
         <h2>카드할인/ 상품권 증정 중복제공</h2>
 	    
       <h1>▧ 해당카드 ▧<br><img src="25card.PNG" width="50%"></h1>
-          <p>▧ 사전예약 상품권 증정 안내 ▧<br>30만원이상 3만원, 50만원~100만원미만 5만원<br>
+         <p>▧ 사전예약 상품권 증정 안내 ▧<br>30만원이상 3만원, 50만원~100만원미만 5만원<br>
 		100만원~1000만원미만 100만원 당 10만원,<br> 1,000만원 이상 100만원</p>
 <p>2차 상품권증정:30만원이상 3만원, 50~100만원 5만원, 100~1,000만원-100만원 당 10만원, 1,000만원 이상 100만원</p>
 <p>3차 상품권증정:30만원이상 1만5천원, 50~100만원 2만5천원, 100~1,000만원-100만원 당 5만원, 1,000만원 이상 50만원</p>
@@ -94,7 +94,7 @@
 <br>
 <button onclick="ShowPrice()"   >계산</button>
 
-		<div id="showResult1"></div>
+<div id="showResult1"></div>
 <div id="showResult2"></div>
 <div id="showResult"></div>
 
@@ -221,14 +221,15 @@ function addComma(num) {
     }
         else if(ans >= 1000000 && ans < 10000000){
         document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
+    }
         else if(ans >= 10000000 && ans < 30000000){
         document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
     }
     else if(ans >= 30000000 && ans < 50000000){
-        document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");   
+        document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");  
     }
     else if(ans >= 50000000){
-        document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
+        document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");    
     }
      else{
         document.querySelector("#showResult1").innerHTML =("상품권 증정 대상이 아닙니다.");
@@ -265,5 +266,3 @@ function addComma(num) {
 </body>
 
 </html>
-
-
